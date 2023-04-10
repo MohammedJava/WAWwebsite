@@ -1,0 +1,9 @@
+/*Text field border color*/
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+  border-color: #C10C99 !important;
+}
+
+
+.MuiFormLabel-root.Mui-focused{
+  color: #000000 !important;
+}

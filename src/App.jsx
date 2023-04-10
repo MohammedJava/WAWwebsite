@@ -1,17 +1,13 @@
 import React from "react";
 import "./App.css";
-import Background from "./Background/Background";
-import Home from "./Home/Home";
-import AnotherPage from "./AnotherPage/AnotherPage";
+import Newsletter from "./Newsletter/Newsletter";
 
 const App = () => {
   const hello = "hello";
 
   return (
     <div className="App">
-      <Home />
-      <Background />
-      <AnotherPage />
+      <Newsletter />
     </div>
   );
 };
