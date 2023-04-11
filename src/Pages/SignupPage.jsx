@@ -3,6 +3,7 @@ import { Grid, TextField, Button, Paper, Typography } from "@mui/material";
 import travel from "../Images/travel 1.png";
 import Navbar from "../Navbar/Navbar";
 import Signup from "../Sign up/Signup";
+import Footer from "../Footer/Footer";
 
 const SignupPage = () => (
   <div>
@@ -17,6 +18,7 @@ const SignupPage = () => (
         </div>
       </Grid>
     </Grid>
+    <Footer />
   </div>
 );
 
