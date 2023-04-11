@@ -1,18 +1,18 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Background from "./Background/Background";
-import Home from "./Home/Home";
-import AnotherPage from "./AnotherPage/AnotherPage";
+import NewsletterPage from "./Pages/NewsletterPage";
 
 const App = () => {
   const hello = "hello";
 
   return (
-    <div className="App">
-      <Home />
-      <Background />
-      <AnotherPage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NewsletterPage />} />
+        <Route path="/Newsletter" element={<NewsletterPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
