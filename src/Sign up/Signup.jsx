@@ -72,7 +72,7 @@ const Signup = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             width: "100%",
-            paddingBottom: "18px",
+            paddingBottom: "4px",
           }}
         >
           {alert ? (
@@ -89,7 +89,7 @@ const Signup = () => {
             flexDirection: "row",
             justifyContent: "space-between",
             width: "100%",
-            paddingBottom: "18px",
+            paddingBottom: "4px",
           }}
         >
           <TextField
