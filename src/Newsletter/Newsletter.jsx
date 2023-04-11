@@ -10,19 +10,17 @@ import Alert from "@mui/material/Alert";
 import "./Newsletter.css";
 
 const Newsletter = () => {
-  const emails = JSON.parse(localStorage.getItem("emails"));
+  const emails = JSON.parse(localStorage.getItem("emails")) || [];
   const [alert, setAlert] = useState(false);
   const [alertContent, setAlertContent] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (event.target[0].value.includes("@")) {
-      if (
-        !JSON.parse(localStorage.getItem("emails")).includes(
-          event.target[0].value
-        )
-      ) {
-        emails.push(event.target[0].value);
+    const email = event.target[0].value;
+    if (email.includes("@")) {
+      if (!emails || !emails.includes(email)) {
+        emails.push(email);
         localStorage.setItem("emails", JSON.stringify(emails));
         setAlert(true);
         setAlertSeverity("success");
@@ -31,7 +29,6 @@ const Newsletter = () => {
         setAlert(true);
         setAlertSeverity("error");
         setAlertContent("Email already registered");
-        console.log(JSON.parse(localStorage.getItem("emails")));
       }
     } else {
       setAlert(true);
