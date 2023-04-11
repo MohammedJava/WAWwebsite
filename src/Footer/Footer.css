@@ -1,0 +1,7 @@
+.grid-container {
+    display: grid;
+  }
+  .aParent div {
+    float: left;
+    clear: none; 
+}
