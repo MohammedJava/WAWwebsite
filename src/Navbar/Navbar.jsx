@@ -18,10 +18,6 @@ const Navbar = () => {
     padding: "1rem",
   };
 
-  const dropdownStyle = {
-    marginTop: "4.5rem",
-  };
-
   return (
     <div>
       <AppBar position="static" style={appBarStyle}>
