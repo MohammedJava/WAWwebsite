@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, MenuItem } from "@mui/material";
+import { AppBar, Link, Toolbar, Typography, MenuItem } from "@mui/material";
 import logo from "../Images/logo 1.png";
 
 const Navbar = () => {
@@ -25,11 +25,15 @@ const Navbar = () => {
           <Typography variant="h6" style={titleStyle}>
             <img src={logo} alt="Logo" width="40%" />
           </Typography>
-          <MenuItem style={menuItemStyle}>Sign Up &#9662;</MenuItem>
+          <Link href="/Signup" underline="none" style={{ color: "white" }}>
+            <MenuItem style={menuItemStyle}>Sign Up &#9662;</MenuItem>
+          </Link>
           <MenuItem style={menuItemStyle}>Contact Us &#9662;</MenuItem>
           <MenuItem style={menuItemStyle}>Services &#9662;</MenuItem>
           <MenuItem style={menuItemStyle}>About Us</MenuItem>
-          <MenuItem style={menuItemStyle}>Newsletter</MenuItem>
+          <Link href="/Newsletter" underline="none" style={{ color: "white" }}>
+            <MenuItem style={menuItemStyle}>Newsletter</MenuItem>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
