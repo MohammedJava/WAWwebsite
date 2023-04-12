@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div style={{ position: "sticky", top: 0 }}>
       <AppBar position="static" style={appBarStyle}>
         <Toolbar>
           <Typography variant="h6" style={titleStyle}>
