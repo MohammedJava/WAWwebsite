@@ -6,6 +6,7 @@ import {
   Button,
   Paper,
   Typography,
+  Link,
 } from "@mui/material";
 
 const Signup = () => {
@@ -59,7 +60,9 @@ const Signup = () => {
       <div style={{ width: "100%", marginTop: "16px", textAlign: "center" }}>
         <Typography>
           If you already have an account, you can{" "}
-          <b style={{ color: "#C10C99" }}>Login here!</b>
+          <Link href="/Signin" underline="none" style={{ color: "white" }}>
+            <b style={{ color: "#C10C99" }}>Login here!</b>
+          </Link>
         </Typography>
       </div>
       <form
