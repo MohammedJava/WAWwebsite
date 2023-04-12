@@ -24,14 +24,22 @@ const Footer = () => (
     variant="outlined"
   >
     <div className="aParent">
-      <div style={{ color: "white", margin: "1%" }}>
-        <span>
+      <div
+        style={{
+          color: "white",
+          marginBottom: "3%",
+          marginLeft: "1%",
+          marginTop: "0.2%",
+        }}
+      >
+        <span style={{ fontSize: "11pt" }}>
           © 2023 WeekendAllWeek <br /> All Rights Reserved
         </span>
       </div>
       <div
         style={{
-          margin: "2%",
+          marginTop: "0.3%",
+          marginRight: "1%",
           float: "right",
           display: "inline-block",
           fontFamily: "sans-serif",

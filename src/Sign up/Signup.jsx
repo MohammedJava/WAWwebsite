@@ -47,7 +47,7 @@ const Signup = () => {
   return (
     <div
       style={{
-        margin: "80px 32px",
+        margin: "30px 32px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
