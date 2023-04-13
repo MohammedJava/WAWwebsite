@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import SigninPage from "./Pages/SigninPage";
 import NewsletterPage from "./Pages/NewsletterPage";
+import SigninPage from "./Pages/SigninPage";
 import SignupPage from "./Pages/SignupPage";
 
 const App = () => {

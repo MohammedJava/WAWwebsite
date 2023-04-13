@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Button from "@mui/material/Button";
-import "./Footer.css";
-import IconButton from "@mui/material/IconButton";
-import Instagram from "@mui/icons-material/Instagram";
 import Facebook from "@mui/icons-material/Facebook";
-import Twitter from "@mui/icons-material/Twitter";
+import Instagram from "@mui/icons-material/Instagram";
 import Linkedin from "@mui/icons-material/LinkedIn";
+import Twitter from "@mui/icons-material/Twitter";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => (
   <Paper
     style={{
-      marginTop: "20px",
+      paddingBottom: "50px",
       width: "100%",
       height: "7%",
-      position: "fixed",
+      left: 0,
       bottom: 0,
       backgroundColor: "#363636",
+      position: "fixed",
     }}
     component="footer"
     square
