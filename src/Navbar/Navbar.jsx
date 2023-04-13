@@ -23,7 +23,7 @@ const Navbar = () => {
       <AppBar position="static" style={appBarStyle}>
         <Toolbar>
           <Typography variant="h6" style={titleStyle}>
-            <img src={logo} alt="Logo" width="40%" />
+            <img src={logo} alt="Logo" width="30%" />
           </Typography>
           <Link href="/Signup" underline="none" style={{ color: "white" }}>
             <MenuItem style={menuItemStyle}>Sign Up &#9662;</MenuItem>
