@@ -85,11 +85,11 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div style={{ position: "sticky", top: 0 }}>
       <AppBar position="static" style={appBarStyle}>
         <Toolbar>
           <Typography variant="h6" style={titleStyle}>
-            <img src={logo} alt="Logo" width="40%" />
+            <img src={logo} alt="Logo" width="30%" />
           </Typography>
           <Link href="/Signup" underline="none" style={{ color: "white" }}>
             <MenuItem style={menuItemStyle}>Sign Up</MenuItem>
