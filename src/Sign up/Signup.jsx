@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 
 const Signup = () => {
+  const registeredEmails = JSON.parse(localStorage.getItem("emails")) || [];
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,24 +25,34 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email.includes("@")) {
-      setAlert(true);
-      setAlertSeverity("error");
-      setAlertContent("Please enter a valid email!");
-    } else if (password !== confirmPassword) {
-      setAlert(true);
-      setAlertSeverity("error");
-      setAlertContent("Passwords do not match! Please try again.");
-    } else if (!agreed) {
-      setAlert(true);
-      setAlertSeverity("warning");
-      setAlertContent(
-        "Please check the Terms and Conditions checkbox to continue!"
-      );
+    if (!registeredEmails.includes(email)) {
+      if (!email.includes("@")) {
+        setAlert(true);
+        setAlertSeverity("error");
+        setAlertContent("Please enter a valid email!");
+      } else if (password !== confirmPassword) {
+        setAlert(true);
+        setAlertSeverity("error");
+        setAlertContent("Passwords do not match! Please try again.");
+      } else if (!agreed) {
+        setAlert(true);
+        setAlertSeverity("warning");
+        setAlertContent(
+          "Please check the Terms and Conditions checkbox to continue!"
+        );
+      } else {
+        setAlert(true);
+        setAlertSeverity("success");
+        setAlertContent("Successfully Registered!");
+        registeredEmails.push(email);
+        localStorage.setItem("emails", JSON.stringify(registeredEmails));
+      }
     } else {
       setAlert(true);
-      setAlertSeverity("success");
-      setAlertContent("Successfully Registered!");
+      setAlertSeverity("error");
+      setAlertContent(
+        "There is already an account registered with that email, please sign in instead."
+      );
     }
   };
 
@@ -79,7 +90,7 @@ const Signup = () => {
           }}
         >
           {alert ? (
-            <Alert style={{ width: 500 }} severity={alertSeverity}>
+            <Alert style={{ width: "100%" }} severity={alertSeverity}>
               {alertContent}
             </Alert>
           ) : (
